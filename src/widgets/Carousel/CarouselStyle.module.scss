@@ -1,0 +1,101 @@
+@import "@styles/colors.scss";
+
+.container {
+  // margin-bottom: 100px;
+  :global {
+    .slick-arrow {
+      &::before,
+      &::after {
+        content: "" !important;
+      }
+    }
+  }
+  img {
+    width: 100%;
+  }
+
+  :global {
+    .slick-list {
+      border-radius: 40px;
+    }
+    .slick-dots.slick-dots-bottom {
+      z-index: 1;
+      bottom: -40px;
+
+      li button {
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+        border: solid $silver 1px;
+      }
+
+      li.slick-active {
+        width: 16px;
+      }
+
+      li.slick-active button {
+        width: 12px;
+        height: 12px;
+        border-radius: 100%;
+        background: var(--dots-background);
+      }
+    }
+  }
+}
+
+.carouselItem {
+  height: 486px;
+  max-height: 486px;
+  position: relative;
+  :global {
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.carouselItemContent {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  max-width: 40vw;
+  background-color: rgba(55, 71, 116, 0.75);
+  border-bottom-right-radius: 9999px;
+  border-top-right-radius: 9999px;
+  padding: 2rem 3rem 2rem 2rem;
+  :global {
+    h1,
+    div {
+      color: white;
+    }
+  }
+}
+
+/* Tampilan saat ukuran layar mobile */
+@media (max-width: 767px) {
+  .container {
+    margin-top: 32px;
+    :global {
+      .slick-list {
+        border-radius: 20px;
+      }
+      .slick-dots.slick-dots-bottom {
+        bottom: -40px;
+      }
+    }
+  }
+
+  .carouselItemContent {
+    max-width: 95vw;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 1rem;
+  }
+
+  .carouselItem {
+    height: 428px;
+    max-height: 428px;
+  }
+}

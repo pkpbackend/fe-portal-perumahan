@@ -1,0 +1,217 @@
+@import "@styles/colors.scss";
+
+.container {
+  width: 100%;
+  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.08);
+  background-color: $white;
+  border-radius: 20px;
+  padding: 32px;
+  // margin-bottom: 100px;
+
+  h2 {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}
+
+.menu {
+  background-color: $silverCloud;
+  padding: 48px;
+  border-radius: 15px;
+  height: 500px;
+  overflow-y: auto;
+
+  :global {
+    .ant-menu {
+      background: inherit !important;
+      border-right: none;
+      .ant-menu-item,
+      .ant-menu-submenu-title {
+        background-color: $white;
+        border-radius: 10px;
+        padding: 36px;
+        font-size: 1rem;
+        margin-bottom: 8px;
+        .ant-menu-item-icon {
+          background: white;
+          color: #575757;
+          border-radius: 80px;
+          width: 50px;
+          height: 50px;
+          border: 1px solid #ececec;
+          display: grid;
+          place-items: center;
+        }
+        svg {
+          font-size: 1.5rem;
+        }
+        .ant-menu-submenu-arrow {
+          color: black;
+        }
+
+        &:hover {
+          color: var(--selected-bg) !important;
+        }
+      }
+
+      .ant-menu-submenu-open:not(.ant-menu-submenu-selected) {
+        .ant-menu-submenu-title {
+          background-color: var(--selected-bg);
+          color: #fff;
+          &:hover {
+            color: #fff !important;
+          }
+        }
+        .ant-menu-submenu-arrow {
+          color: #fff;
+        }
+      }
+      .ant-menu-item-selected {
+        background-color: var(--selected-bg);
+        color: #fff;
+        &::after {
+          border-right: 0;
+        }
+        &:hover {
+          color: #fff !important;
+        }
+      }
+      .ant-menu-sub.ant-menu-inline {
+        border-left: 2px solid #b8cbde;
+        margin-left: 5%;
+        .ant-menu-item {
+          width: 90%;
+          padding-left: 1.5rem !important;
+          margin-left: 5%;
+        }
+      }
+    }
+  }
+}
+
+.menu::-webkit-scrollbar {
+  width: 8px;
+}
+.menu::-webkit-scrollbar-track {
+  border-radius: 15px;
+  background-color: $lightGray2;
+  margin: 35px 0px;
+}
+.menu::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background-color: $midGray;
+}
+
+.content {
+  border: solid $silverSmoke 1px;
+  border-radius: 15px;
+  margin-left: 30px;
+  text-align: left;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 40px;
+  overflow: hidden;
+  .icon {
+    :global {
+      .anticon {
+        font-size: 4.5rem;
+        color: var(--selected-bg);
+      }
+    }
+    display: grid;
+    place-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 80px;
+    background: #f5f8ff;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 50%;
+}
+
+.descriptionContainer {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  animation: fadeIn 0.5s;
+  overflow: hidden;
+  .description {
+    height: 100%;
+    .titleWrapper {
+      display: flex;
+      padding: 24px 50px 0 50px;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .title {
+      font-family: "Quicksand";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+    }
+    .paragraph {
+      height: 100%;
+      overflow-y: auto;
+      margin-top: 10px;
+      font-size: 14px;
+      padding: 0px 50px 150px 50px;
+      * {
+        font-size: 1rem !important;
+        font-weight: 300 !important;
+        font-family: "Inter" !important;
+      }
+    }
+    .paragraph::-webkit-scrollbar {
+      width: 4px;
+    }
+    .paragraph::-webkit-scrollbar-track {
+      border-radius: 15px;
+      background-color: $lightGray2;
+    }
+    .paragraph::-webkit-scrollbar-thumb {
+      border-radius: 15px;
+      background-color: $midGray;
+    }
+  }
+  .descriptionFooter {
+    box-shadow: 0 -5px 15px -3px rgb(0 0 0 / 0.1),
+      0 -2px 6px -4px rgb(0 0 0 / 0.1);
+    height: 13%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+/* Tampilan saat ukuran layar mobile */
+@media (max-width: 767px) {
+  .container {
+    h2 {
+      font-size: 24px;
+    }
+  }
+}

@@ -1,0 +1,125 @@
+@import "@styles/colors.scss";
+
+.menu-layanan {
+  border-right: 0px;
+  .menu-active {
+    background-color: #2b3f78 !important;
+    color: white;
+    div {
+      span {
+        svg {
+          filter: invert(24%) sepia(18%) saturate(2025%) hue-rotate(186deg)
+            brightness(92%) contrast(92%);
+        }
+      }
+    }
+  }
+  .menu-active:hover {
+    background-color: #2b3f78 !important;
+    color: white !important;
+  }
+  .menu::after {
+    border: 0px !important;
+  }
+  li {
+    font-size: 16px;
+    div {
+      span {
+        svg {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+
+  .parent-child-menu {
+    display: flex;
+    span {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .parent-child-menu-active {
+    background-color: #2b3f78 !important;
+    color: white !important;
+    span {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    div {
+      span {
+        svg {
+          filter: invert(24%) sepia(18%) saturate(2025%) hue-rotate(186deg)
+            brightness(92%) contrast(92%);
+        }
+      }
+    }
+  }
+  .parent-child-menu-active {
+    display: flex !important;
+  }
+  .parent-child-menu::after {
+    border: 0px !important;
+  }
+
+  .child-menu-container {
+    border-left: 2px solid #b8cbde;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin-left: auto;
+    .child-menu {
+      width: 96%;
+      margin-left: auto;
+      padding-left: 20px !important;
+    }
+
+    .child-menu-active {
+      background-color: #2b3f78 !important;
+      color: white !important;
+      width: 96%;
+      margin-left: auto;
+      padding-left: 20px !important;
+    }
+
+    .child-menu::after {
+      border: 0px !important;
+    }
+  }
+}
+
+/* Tampilan saat ukuran layar tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .menu-layanan {
+    border-right: 0px;
+
+    li {
+      font-size: 8px;
+      div {
+        span {
+          svg {
+            font-size: 23px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.subMenu {
+  font-size: 16px;
+  background-color: $white;
+
+  &:global(.ant-menu-submenu-open) {
+    :global(.ant-menu-submenu-title) {
+      background-color: $darkBlue;
+      color: #fff;
+    }
+    :global(.ant-menu-submenu-arrow) {
+      color: #fff;
+    }
+  }
+}

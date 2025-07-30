@@ -1,0 +1,14 @@
+@import "@styles/colors.scss";
+
+.otpInput {
+  height: 52px;
+  width: 100%;
+  :global {
+    .ant-input-number-input {
+      height: 52px;
+      font-size: 1.5rem;
+      letter-spacing: 1.5rem;
+      text-align: center;
+    }
+  }
+}

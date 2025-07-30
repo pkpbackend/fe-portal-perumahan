@@ -1,0 +1,13 @@
+.container {
+  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  margin-bottom: 3rem !important;
+  overflow: hidden;
+  :global(.ant-card-head) {
+    font-size: 1.1rem;
+  }
+  :global(.ant-card-extra a) {
+    font-size: 0.75rem;
+    text-decoration: underline;
+  }
+}

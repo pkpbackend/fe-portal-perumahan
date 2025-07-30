@@ -1,0 +1,28 @@
+@import '@styles/colors.scss';
+
+.container {
+  h3 {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  section {
+    margin-bottom: 100px;
+    text-align: left !important;
+  }
+}
+
+.labelValueContainer {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.buttonAreaContainer {
+  padding-top: 48px;
+
+  :global {
+    .ant-btn {
+      height: 50px;
+    }
+  }
+}

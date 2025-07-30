@@ -1,0 +1,68 @@
+{
+  "name": "portal-perumahan",
+  "version": "3.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node ./next-dev",
+    "start": "npx serve -l 80 ./out",
+    "setup:staging": "pm2 start --name staging-fe-portal npx -- serve -l 2023 ./out",
+    "setup:prod": "pm2 start --name prod-fe-portal npx -- serve -l 12023 ./out",
+    "build": "NODE_TLS_REJECT_UNAUTHORIZED=0 next build",
+    "build:static": "NODE_TLS_REJECT_UNAUTHORIZED=0 next build && next export"
+  },
+  "resolutions": {
+    "@types/react": "17.0.14",
+    "@types/react-dom": "17.0.14"
+  },
+  "dependencies": {
+    "@ant-design/cssinjs": "^1.17.2",
+    "@ant-design/icons": "4.7.0",
+    "@reduxjs/toolkit": "^1.9.5",
+    "@tanstack/react-query": "^4.33.0",
+    "@tanstack/react-query-devtools": "^4.33.0",
+    "antd": "5.11.2",
+    "axios": "^0.26.0",
+    "beautiful-react-hooks": "^0.35.0",
+    "classnames": "^2.3.2",
+    "date-fns": "^2.30.0",
+    "draft-js": "^0.11.7",
+    "draftjs-to-html": "^0.9.1",
+    "file-saver": "^2.0.5",
+    "formik": "^2.2.6",
+    "html-to-draftjs": "^1.5.0",
+    "intersection-observer": "^0.12.2",
+    "js-cookie": "^3.0.5",
+    "jsonwebtoken": "^8.5.1",
+    "jszip": "^3.10.1",
+    "leaflet": "^1.7.1",
+    "leaflet.markercluster": "^1.5.0",
+    "lodash": "^4.17.21",
+    "next": "13.4",
+    "prop-types": "^15.8.1",
+    "qs": "^6.10.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-draft-wysiwyg": "^1.15.0",
+    "react-is-visible": "^1.2.0",
+    "react-leaflet": "^3.2.2",
+    "react-pdf": "^7.5.1",
+    "react-redux": "^8.1.0",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "@types/file-saver": "^2.0.5",
+    "@types/js-cookie": "^3.0.6",
+    "@types/leaflet": "^1.7.5",
+    "@types/leaflet.markercluster": "^1.4.5",
+    "@types/node": "20.9.3",
+    "@types/qs": "^6.9.7",
+    "@types/react": "17.0.14",
+    "@types/react-leaflet": "^2.8.2",
+    "cross-env": "^7.0.3",
+    "sass": "^1.69.5",
+    "typescript": "5.3.2"
+  },
+  "engines": {
+    "node": "20.10.0"
+  }
+}

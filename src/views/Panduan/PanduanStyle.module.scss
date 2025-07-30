@@ -1,0 +1,84 @@
+@import "@styles/colors.scss";
+
+.container {
+  .pageTitle {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    h2 {
+      text-align: left;
+      margin-bottom: 40px;
+    }
+  }
+  > section {
+    margin-top: 80px;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: $white;
+  color: $darkSlateBlue;
+  box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 16px 20px;
+  padding-right: 30px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-decoration: none;
+  cursor: pointer;
+
+  .contentText {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .contentIcon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.goldTitle {
+  color: $deepDarkGold;
+}
+
+/* Tampilan saat ukuran layar mobile */
+@media (max-width: 767px) {
+  .container {
+    .pageTitle {
+      height: 260px;
+      display: flex;
+      align-items: center;
+      h2 {
+        font-size: 32px;
+        margin-bottom: 0px;
+      }
+    }
+    > section {
+      margin-top: 60px;
+      padding: 0 !important;
+    }
+  }
+
+  .content {
+    .contentText {
+      align-items: flex-start;
+      font-size: 16px;
+      line-height: 150%; /* 24px */
+    }
+
+    .contentIcon {
+      margin-top: 6px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

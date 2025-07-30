@@ -1,0 +1,163 @@
+@import "@styles/colors.scss";
+
+.container {
+  .pageTitle {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    h2 {
+      color: $deepDarkGold;
+      text-align: left;
+      margin-bottom: 40px;
+    }
+  }
+  > section {
+    margin-top: 80px;
+  }
+}
+
+.content {
+  // padding-top: 100px;
+  padding-bottom: 100px;
+
+  .titleTentang {
+    color: #404258;
+    font-weight: 700;
+    line-height: 57px;
+    font-size: 38px;
+    font-style: normal;
+  }
+
+  .buttonTentang {
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    background: none;
+    background: linear-gradient(180deg, #2b458b 0%, #0c266f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: "Quicksand";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  p {
+    font-family: "Quicksand";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #404258;
+  }
+
+  .lineTentang {
+    width: 68px;
+    height: 5px;
+    background-color: #ffd568;
+    border-radius: 100px;
+    align-self: center;
+    margin-right: 15px;
+  }
+
+  .tentang {
+    font-family: "Quicksand";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    color: #404258;
+  }
+
+  .backgroundImage {
+    width: 400px;
+    background-color: #ffd568;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .imageTentang {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.2);
+    left: 40px;
+    top: 50px;
+  }
+}
+
+.layout {
+  display: flex;
+}
+
+.goldTitle {
+  color: $deepDarkGold;
+}
+
+/* Tampilan saat ukuran layar mobile */
+@media (max-width: 767px) {
+  .container {
+    .pageTitle {
+      height: 260px;
+      display: flex;
+      align-items: center;
+      h2 {
+        font-size: 32px;
+        margin-bottom: 0px;
+      }
+    }
+    > section {
+      margin-top: 60px;
+      padding: 0 !important;
+    }
+  }
+
+  .content {
+    .backgroundImage {
+      width: 250px;
+    }
+
+    .image {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
+    .imageTentang {
+      left: 25px;
+      top: 30px;
+    }
+
+    .deskripsi {
+      .lineTentang {
+        width: 68px;
+        height: 5px;
+        align-self: center;
+        margin-left: 15px;
+      }
+      .tentang {
+        font-weight: 600;
+        font-size: 15px;
+      }
+      .titleTentang {
+        font-size: 26px;
+        text-align: center;
+        line-height: 150%;
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 150%;
+        margin: 18px;
+      }
+      .buttonTentang {
+        font-weight: 600;
+        font-size: 14px;
+        margin-left: 18px;
+      }
+    }
+  }
+}
